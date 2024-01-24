@@ -1,5 +1,5 @@
 secretNumber=7;
-userNumber=parseInt(prompt("Guess the secret number:"));
+userNumber=parseInt(prompt("Guess the secret number(1 to 9):"));
 while(userNumber!==secretNumber)
 {
     userNumber=parseInt(prompt("Your guess is wrong! Try again:"));
