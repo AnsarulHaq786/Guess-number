@@ -1,6 +1,6 @@
-secretNumber=7;
-userNumber=parseInt(prompt("Guess the secret number(1 to 9):"));
-while(userNumber!==secretNumber)
+let secretNumber=7;
+let userNumber=parseInt(prompt("Guess the secret number(1 to 9):"));
+while(userNumber!==secretNumber)//Compare the datatype of input number also
 {
     userNumber=parseInt(prompt("Your guess is wrong! Try again:"));
 }
