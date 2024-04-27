@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guess number</title>
 </head>
 <body>
-<a id="randomlink" href="https://youtu.be/xvFZjo5PgG0?feature=shared">open gift</a>
+    <div class="container">
+        <input type="text" id="input" style="width: 200px;" placeholder="Guess number between 1 and 20">
+        <div class="buttons">
+        <button type="button" id="submitButton" onclick="checkNum()">Submit</button>
+        <p id="para"></p>
+        <button type="button" id="giftButton" style="display: none" onclick="openGift()">Open Gift</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,11 +1,26 @@
-let secretNumber=7;
-let userNumber=parseInt(prompt("Guess the secret number(1 to 9):"));
-while(userNumber!==secretNumber)//Compare the datatype of input number also
+let secretNumber=Math.floor(Math.random()*20+1);
+let tryCount=0;
+function checkNum()
 {
-    userNumber=parseInt(prompt("Your guess is wrong! Try again:"));
+    let userNumber=document.getElementById("input").value;
+        if(userNumber<secretNumber)
+        {
+            tryCount++;
+            document.getElementById("para").innerHTML=`Try Count=${tryCount}<br>Try greater number than this!`;
+        }
+            
+        else if(userNumber>secretNumber)
+        {
+            tryCount++;
+            document.getElementById("para").innerHTML=`Try Count=${tryCount}<br>Try smaller number than this!`;
+        }     
+        else
+        {
+            document.getElementById("para").innerHTML=`Congratulation you guessed the number in ${tryCount+1}th attempt!<br> Here is your gift`;
+            document.getElementById("giftButton").style.display="block";
+        }
 }
-console.log("Congratulations! Here is your gift.");
-
-let linkElement = document.getElementById("randomlink");
-
-linkElement.href = "https://youtu.be/xvFZjo5PgG0?feature=shared&autoplay=1&mute=0";
+function openGift()
+{
+    location.href="https://youtu.be/xvFZjo5PgG0?autoplay=1";
+}
